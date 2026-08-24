@@ -47,3 +47,42 @@ let precio: Double = 29.99
 // FIX 4:
 var activo: Bool = true
 // Explicación: Se eliminaron las comillas a 'true' porque los booleanos (Bool) no llevan comillas (con comillas se interpreta como String).
+// ===== 1.3 PREDICCIONES =====
+
+let x = 10
+var y = 20
+y = y + x
+print(y) // PREDICT 1: Imprime 30
+
+let a = "Hola"
+let b = "Mundo"
+print(a + " " + b) // PREDICT 2: Imprime "Hola Mundo"
+
+var contador = 0
+contador = contador + 1
+contador = contador + 1
+contador = contador + 1
+print(contador) // PREDICT 3: Imprime 3
+
+let entero = 7
+let decimal = Double(entero)
+print(type(of: decimal)) // PREDICT 4: Imprime Double
+
+
+// ===== 1.4 INFERENCIA DE TIPOS =====
+
+// TODO 7: Una variable con el valor 2026
+let anio = 2026
+print(type(of: anio)) // Swift infiere el tipo Int
+
+// TODO 8: Una variable con el valor 72.5
+let peso = 72.5
+print(type(of: peso)) // Swift infiere el tipo Double
+
+// TODO 9: Una variable con el valor "Lima"
+let ciudad = "Lima"
+print(type(of: ciudad)) // Swift infiere el tipo String
+
+// TODO 10: Una variable con el valor false
+let matriculado = false
+print(type(of: matriculado)) // Swift infiere el tipo Bool
