@@ -54,9 +54,11 @@ var y = 20
 y = y + x
 print(y) // PREDICT 1: Imprime 30
 
-let a = "Hola"
-let b = "Mundo"
-print(a + " " + b) // PREDICT 2: Imprime "Hola Mundo"
+do {
+    let a = "Hola"
+    let b = "Mundo"
+    print(a + " " + b) // PREDICT 2: Imprime "Hola Mundo"
+}
 
 var contador = 0
 contador = contador + 1
@@ -86,3 +88,84 @@ print(type(of: ciudad)) // Swift infiere el tipo String
 // TODO 10: Una variable con el valor false
 let matriculado = false
 print(type(of: matriculado)) // Swift infiere el tipo Bool
+
+
+// ===== 2.1 COMPLETAR OPERACIONES =====
+
+let a = 25
+let b = 7
+
+// Ejemplo (ya resuelto):
+let suma = a + b
+print("Suma: \(a) + \(b) = \(suma)") // 32
+
+// --- TODO 11: Calcula la resta ---
+let resta = a - b
+print("Resta: \(a) - \(b) = \(resta)")
+
+// --- TODO 12: Calcula la multiplicación ---
+let multiplicacion = a * b
+print("Multiplicación: \(a) * \(b) = \(multiplicacion)")
+
+// --- TODO 13: Calcula la división entera ---
+let divisionEntera = a / b
+print("División entera: \(a) / \(b) = \(divisionEntera)")
+
+// --- TODO 14: Calcula el residuo (módulo) ---
+let residuo = a % b
+print("Residuo: \(a) % \(b) = \(residuo)")
+
+
+// ===== 2.2 PREDICCIÓN DE DIVISIÓN =====
+
+print(10 / 3)   // PREDICT 5a: 3
+print(10 % 3)   // PREDICT 5b: 1
+print(20 / 7)   // PREDICT 5c: 2
+print(20 % 7)   // PREDICT 5d: 6
+print(100 / 3)  // PREDICT 5e: 33
+print(100 % 3)  // PREDICT 5f: 1
+
+
+// ===== 2.3 CORREGIR CÁLCULOS =====
+
+// FIX 5: Se agruparon las notas con paréntesis para sumar antes de dividir
+let nota1 = 15
+let nota2 = 12
+let nota3 = 18
+let promedio = (nota1 + nota2 + nota3) / 3
+print("Promedio: \(promedio)")
+
+// FIX 6: Se agregaron paréntesis a (fahrenheit - 32) para corregir la conversión
+let fahrenheit = 98.6
+let celsius = (fahrenheit - 32) * 5 / 9
+print("Celsius: \(celsius)")
+
+// FIX 7: Se convirtieron a Double para obtener la división exacta con decimales
+let dividendo = 25
+let divisor = 7
+let resultado = Double(dividendo) / Double(divisor)
+print("Resultado: \(resultado)")
+
+
+// ===== 2.4 CÁLCULOS PRÁCTICOS =====
+
+// TODO 15: Calcula el IGV (18%) de un producto
+let precioProducto = 350.0
+let igv = precioProducto * 0.18
+let precioConIgv = precioProducto + igv
+print("Precio: S/. \(precioProducto)")
+print("IGV: S/. \(igv)")
+print("Total: S/. \(precioConIgv)")
+
+// TODO 16: Área de un círculo con radio 5.0
+let pi = 3.14159
+let radio = 5.0
+let area = pi * radio * radio
+print("Área: \(area)")
+
+// TODO 17: Nota final del curso
+let notaPa = 15.0
+let notaPb = 13.0
+let notaFinal = (0.30 * notaPa) + (0.70 * notaPb)
+print("Nota final: \(notaFinal)")
+print("¿Aprueba? \(notaFinal >= 13.0)")
