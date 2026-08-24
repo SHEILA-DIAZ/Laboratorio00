@@ -322,3 +322,122 @@ do {
     totalComprado += 18.50 // Equivale a: totalComprado = totalComprado + 18.50
     print("Ejemplo 3 (Acumulador decimal): S/. \(totalComprado)")
 }
+// ===== EJERCICIO 5: CALCULADORA COMPLETA (CON IA) =====
+
+// ===== 5.1 PROBLEMA A: CALCULADORA DE IMC =====
+do {
+    print("==================================================") // Imprime separador superior de la tabla
+    print("NOMBRE\t\tPESO\tESTATURA\tIMC\tCATEGORÍA") // Imprime los encabezados de columna de la tabla
+    print("==================================================") // Imprime línea divisoria de la tabla
+
+    // Persona 1
+    let nombre1 = "Carlos" // Asigna el nombre de la primera persona
+    let peso1 = 70.0 // Asigna el peso en kilogramos de la primera persona
+    let estatura1 = 1.75 // Asigna la estatura en metros de la primera persona
+    let imc1 = peso1 / (estatura1 * estatura1) // Calcula IMC dividiendo peso entre estatura al cuadrado
+    let cat1 = imc1 < 18.5 ? "Bajo peso" : (imc1 <= 24.9 ? "Normal" : (imc1 <= 29.9 ? "Sobrepeso" : "Obesidad")) // Evalúa y asigna la categoría según el rango del IMC
+    print("\(nombre1)\t\t\(peso1)kg\t\(estatura1)m\t\t\(String(format: "%.1f", imc1))\t\(cat1)") // Imprime los datos formateados de la primera persona
+
+    // Persona 2
+    let nombre2 = "Ana" // Asigna el nombre de la segunda persona
+    let peso2 = 50.0 // Asigna el peso en kilogramos de la segunda persona
+    let estatura2 = 1.65 // Asigna la estatura en metros de la segunda persona
+    let imc2 = peso2 / (estatura2 * estatura2) // Calcula IMC dividiendo peso entre estatura al cuadrado
+    let cat2 = imc2 < 18.5 ? "Bajo peso" : (imc2 <= 24.9 ? "Normal" : (imc2 <= 29.9 ? "Sobrepeso" : "Obesidad")) // Evalúa y asigna la categoría según el rango del IMC
+    print("\(nombre2)\t\t\(peso2)kg\t\(estatura2)m\t\t\(String(format: "%.1f", imc2))\t\(cat2)") // Imprime los datos formateados de la segunda persona
+
+    // Persona 3
+    let nombre3 = "Luis" // Asigna el nombre de la tercera persona
+    let peso3 = 95.0 // Asigna el peso en kilogramos de la tercera persona
+    let estatura3 = 1.80 // Asigna la estatura en metros de la tercera persona
+    let imc3 = peso3 / (estatura3 * estatura3) // Calcula IMC dividiendo peso entre estatura al cuadrado
+    let cat3 = imc3 < 18.5 ? "Bajo peso" : (imc3 <= 24.9 ? "Normal" : (imc3 <= 29.9 ? "Sobrepeso" : "Obesidad")) // Evalúa y asigna la categoría según el rango del IMC
+    print("\(nombre3)\t\t\(peso3)kg\t\(estatura3)m\t\t\(String(format: "%.1f", imc3))\t\(cat3)") // Imprime los datos formateados de la tercera persona
+    print("==================================================") // Imprime separador inferior de la tabla
+}
+
+// ===== 5.2 PROBLEMA B: CONVERSOR DE MONEDAS =====
+do {
+    let tcDolar = 3.75 // Define la tasa de cambio fija del dólar estadounidense
+    let tcEuro = 4.10 // Define la tasa de cambio fija del euro
+    let tcPesoMX = 0.22 // Define la tasa de cambio fija del peso mexicano
+
+    print("\n==================================================") // Imprime línea divisoria superior
+    print("SOLES (S/.)\tDÓLARES ($)\tEUROS (€)\tPESOS MX ($)") // Imprime las columnas de la tabla de monedas
+    print("==================================================") // Imprime separador de encabezado
+
+    // Monto 1: 100 soles
+    let soles1 = 100.0 // Asigna la cantidad inicial de 100 soles
+    let usd1 = soles1 / tcDolar // Convierte el primer monto de soles a dólares
+    let eur1 = soles1 / tcEuro // Convierte el primer monto de soles a euros
+    let mxn1 = soles1 / tcPesoMX // Convierte el primer monto de soles a pesos mexicanos
+    print("S/. \(String(format: "%.2f", soles1))\t$ \(String(format: "%.2f", usd1))\t€ \(String(format: "%.2f", eur1))\t$ \(String(format: "%.2f", mxn1))") // Imprime los montos convertidos para 100 soles
+
+    // Monto 2: 500 soles
+    let soles2 = 500.0 // Asigna la cantidad inicial de 500 soles
+    let usd2 = soles2 / tcDolar // Convierte el segundo monto de soles a dólares
+    let eur2 = soles2 / tcEuro // Convierte el segundo monto de soles a euros
+    let mxn2 = soles2 / tcPesoMX // Convierte el segundo monto de soles a pesos mexicanos
+    print("S/. \(String(format: "%.2f", soles2))\t$ \(String(format: "%.2f", usd2))\t€ \(String(format: "%.2f", eur2))\t$ \(String(format: "%.2f", mxn2))") // Imprime los montos convertidos para 500 soles
+
+    // Monto 3: 1000 soles
+    let soles3 = 1000.0 // Asigna la cantidad inicial de 1000 soles
+    let usd3 = soles3 / tcDolar // Convierte el tercer monto de soles a dólares
+    let eur3 = soles3 / tcEuro // Convierte el tercer monto de soles a euros
+    let mxn3 = soles3 / tcPesoMX // Convierte el tercer monto de soles a pesos mexicanos
+    print("S/. \(String(format: "%.2f", soles3))\t$ \(String(format: "%.2f", usd3))\t€ \(String(format: "%.2f", eur3))\t$ \(String(format: "%.2f", mxn3))") // Imprime los montos convertidos para 1000 soles
+    print("==================================================") // Imprime separador inferior
+}
+
+// ===== 5.3 PROBLEMA C: NOTAS DEL CURSO =====
+do {
+    print("\n==================================================") // Imprime separador inicial de notas
+    print("ALUMNO\t\tPA\tPB\tFINAL\tESTADO") // Imprime la cabecera de la tabla de alumnos
+    print("==================================================") // Imprime barra divisoria
+
+    // Alumno 1
+    let nom1 = "Sheila" // Asigna el nombre del primer alumno
+    let pa1 = 15.0 // Asigna la nota Pa del primer alumno
+    let pb1 = 14.0 // Asigna la nota Pb del primer alumno
+    let nf1 = (0.30 * pa1) + (0.70 * pb1) // Calcula la nota final ponderando 30% Pa y 70% Pb
+    let est1 = nf1 >= 13.0 ? "Aprobado" : "Desaprobado" // Determina el estado del primer alumno
+    print("\(nom1)\t\t\(pa1)\t\(pb1)\t\(String(format: "%.2f", nf1))\t\(est1)") // Imprime fila completa del primer alumno
+
+    // Alumno 2
+    let nom2 = "Juan" // Asigna el nombre del segundo alumno
+    let pa2 = 10.0 // Asigna la nota Pa del segundo alumno
+    let pb2 = 11.0 // Asigna la nota Pb del segundo alumno
+    let nf2 = (0.30 * pa2) + (0.70 * pb2) // Calcula la nota final ponderando 30% Pa y 70% Pb
+    let est2 = nf2 >= 13.0 ? "Aprobado" : "Desaprobado" // Determina el estado del segundo alumno
+    print("\(nom2)\t\t\(pa2)\t\(pb2)\t\(String(format: "%.2f", nf2))\t\(est2)") // Imprime fila completa del segundo alumno
+
+    // Alumno 3
+    let nom3 = "María" // Asigna el nombre del tercer alumno
+    let pa3 = 18.0 // Asigna la nota Pa del tercer alumno
+    let pb3 = 16.0 // Asigna la nota Pb del tercer alumno
+    let nf3 = (0.30 * pa3) + (0.70 * pb3) // Calcula la nota final ponderando 30% Pa y 70% Pb
+    let est3 = nf3 >= 13.0 ? "Aprobado" : "Desaprobado" // Determina el estado del tercer alumno
+    print("\(nom3)\t\t\(pa3)\t\(pb3)\t\(String(format: "%.2f", nf3))\t\(est3)") // Imprime fila completa del tercer alumno
+
+    // Alumno 4
+    let nom4 = "Pedro" // Asigna el nombre del cuarto alumno
+    let pa4 = 12.0 // Asigna la nota Pa del cuarto alumno
+    let pb4 = 13.0 // Asigna la nota Pb del cuarto alumno
+    let nf4 = (0.30 * pa4) + (0.70 * pb4) // Calcula la nota final ponderando 30% Pa y 70% Pb
+    let est4 = nf4 >= 13.0 ? "Aprobado" : "Desaprobado" // Determina el estado del cuarto alumno
+    print("\(nom4)\t\t\(pa4)\t\(pb4)\t\(String(format: "%.2f", nf4))\t\(est4)") // Imprime fila completa del cuarto alumno
+
+    // Alumno 5
+    let nom5 = "Lucía" // Asigna el nombre del quinto alumno
+    let pa5 = 16.0 // Asigna la nota Pa del quinto alumno
+    let pb5 = 17.0 // Asigna la nota Pb del quinto alumno
+    let nf5 = (0.30 * pa5) + (0.70 * pb5) // Calcula la nota final ponderando 30% Pa y 70% Pb
+    let est5 = nf5 >= 13.0 ? "Aprobado" : "Desaprobado" // Determina el estado del quinto alumno
+    print("\(nom5)\t\t\(pa5)\t\(pb5)\t\(String(format: "%.2f", nf5))\t\(est5)") // Imprime fila completa del quinto alumno
+
+    // Promedio General
+    let promedioGeneral = (nf1 + nf2 + nf3 + nf4 + nf5) / 5.0 // Calcula el promedio general del grupo dividiendo la suma de notas finales entre 5
+    print("==================================================") // Imprime separador final
+    print("Promedio general de la clase: \(String(format: "%.2f", promedioGeneral))") // Imprime el promedio general de la clase
+    print("==================================================") // Imprime cierre de tabla
+}
