@@ -16,9 +16,9 @@ struct ContentView: View {
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
-            Text("Versión MANUAL - Hecha sin IA")
+            Text("Versión CON IA - Asistida por Claude")
                 .font(.headline)
-                .foregroundColor(.blue)
+                .foregroundColor(.green)
         }
         .padding()
     }
