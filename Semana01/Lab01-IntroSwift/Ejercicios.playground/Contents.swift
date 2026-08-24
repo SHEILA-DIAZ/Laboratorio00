@@ -1,6 +1,7 @@
 import UIKit
 
 // ===== EJERCICIO 1: VARIABLES Y CONSTANTES =====
+
 // Docente : Juan León
 let nombreProfesor = "Juan Leon"
 var puntosProfesor = 100
@@ -28,6 +29,7 @@ print("Estatura: \(estatura) m")
 print("Trabaja: \(trabaja)")
 print("Celular: \(celular)")
 
+
 // ===== 1.2 CORREGIR ERRORES =====
 
 // FIX 1:
@@ -46,7 +48,9 @@ let precio: Double = 29.99
 
 // FIX 4:
 var activo: Bool = true
-// Explicación: Se eliminaron las comillas a 'true' porque los booleanos (Bool) no llevan comillas (con comillas se interpreta como String).
+// Explicación: Se eliminaron las comillas a 'true' porque los booleanos (Bool) no llevan comillas.
+
+
 // ===== 1.3 PREDICCIONES =====
 
 let x = 10
@@ -89,6 +93,8 @@ print(type(of: ciudad)) // Swift infiere el tipo String
 let matriculado = false
 print(type(of: matriculado)) // Swift infiere el tipo Bool
 
+
+// ===== EJERCICIO 2: OPERACIONES Y CÁLCULOS =====
 
 // ===== 2.1 COMPLETAR OPERACIONES =====
 
@@ -169,3 +175,90 @@ let notaPb = 13.0
 let notaFinal = (0.30 * notaPa) + (0.70 * notaPb)
 print("Nota final: \(notaFinal)")
 print("¿Aprueba? \(notaFinal >= 13.0)")
+
+
+// ===== EJERCICIO 3: INTERPOLACIÓN DE CADENAS =====
+
+// ===== 3.1 COMPLETAR INTERPOLACIÓN =====
+
+do {
+    // Ejemplo (ya resuelto):
+    let fruta = "manzana"
+    let cantidad = 5
+    let precio = 2.50
+    print("Compré \(cantidad) \(fruta)s por S/. \(Double(cantidad) * precio)")
+
+    // --- TODO 18: Crea tu tarjeta de presentación ---
+    let nombre = "Sheila"
+    let apellido = "Díaz"
+    let edad = 19
+    let carrera = "Diseño y Desarrollo de Software"
+    let ciclo = 4
+    let distrito = "Lima"
+
+    print("Me llamo \(nombre) \(apellido), tengo \(edad) años.")
+    print("Estudio \(carrera), ciclo \(ciclo).")
+    print("Vivo en \(distrito).")
+}
+
+
+// ===== 3.2 FACTURA CON CÁLCULOS =====
+
+do {
+    // ===== TODO 19: Completa la factura =====
+    let prod1 = "Laptop"
+    let prec1 = 3500.00
+    let cant1 = 1
+
+    let prod2 = "Mouse"
+    let prec2 = 45.50
+    let cant2 = 2
+
+    let prod3 = "Teclado"
+    let prec3 = 120.00
+    let cant3 = 1
+
+    // TODO: Calcula el subtotal de cada producto
+    let sub1 = prec1 * Double(cant1)
+    let sub2 = prec2 * Double(cant2)
+    let sub3 = prec3 * Double(cant3)
+
+    // TODO: Calcula el subtotal general
+    let subtotalGeneral = sub1 + sub2 + sub3
+
+    // TODO: Calcula el IGV (18%)
+    let igv = subtotalGeneral * 0.18
+
+    // TODO: Calcula el total
+    let total = subtotalGeneral + igv
+
+    // TODO: Imprime la factura usando interpolación:
+    print("===================================")
+    print("        FACTURA DE VENTA")
+    print("===================================")
+    print("\(prod1) x\(cant1)        S/. \(sub1)")
+    print("\(prod2) x\(cant2)        S/. \(sub2)")
+    print("\(prod3) x\(cant3)      S/. \(sub3)")
+    print("-----------------------------------")
+    print("Subtotal: S/. \(subtotalGeneral)")
+    print("IGV 18%:   S/. \(igv)")
+    print("TOTAL:     S/. \(total)")
+    print("===================================")
+}
+
+
+// ===== 3.3 PREDICCIÓN DE INTERPOLACIÓN =====
+
+do {
+    // PREDICT 6: ¿Qué imprime cada línea?
+    let n = "Swift"
+    let v = 5
+
+    print("\(n) versión \(v)")             // PREDICT 6a: Imprime "Swift versión 5"
+    print("\(v) * \(v) = \(v * v)")         // Imprime "5 * 5 = 25"
+    print("Hay \(v + 3) alumnos")           // PREDICT 6b: Imprime "Hay 8 alumnos"
+
+    let p1 = 100.0                         // PREDICT 6c: Declara la constante p1 de tipo Double con 100.0
+    let d = 0.15
+    print("Descuento: S/. \(p1 * d)")      // PREDICT 6d: Imprime "Descuento: S/. 15.0"
+}
