@@ -6,9 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CD8BB4B4303CF80F001C092A /* PROMPTS.md in Sources */ = {isa = PBXBuildFile; fileRef = CD8BB4B3303CF7FD001C092A /* PROMPTS.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CD8BB498303CD9C9001C092A /* Lab01-IntroSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab01-IntroSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8BB4B2303CDDC3001C092A /* Ejercicios.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ejercicios.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CD8BB4B3303CF7FD001C092A /* PROMPTS.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROMPTS.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +38,7 @@
 		CD8BB48F303CD9C9001C092A = {
 			isa = PBXGroup;
 			children = (
+				CD8BB4B3303CF7FD001C092A /* PROMPTS.md */,
 				CD8BB4B2303CDDC3001C092A /* Ejercicios.playground */,
 				CD8BB49A303CD9C9001C092A /* Lab01-IntroSwift */,
 				CD8BB499303CD9C9001C092A /* Products */,
@@ -121,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8BB4B4303CF80F001C092A /* PROMPTS.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
