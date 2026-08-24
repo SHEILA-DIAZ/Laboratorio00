@@ -262,3 +262,63 @@ do {
     let d = 0.15
     print("Descuento: S/. \(p1 * d)")      // PREDICT 6d: Imprime "Descuento: S/. 15.0"
 }
+// ===== EJERCICIO 4: INVESTIGACIÓN Y CONVERSIONES =====
+
+// ===== 4.1 CONVERSIONES DE TIPO =====
+do {
+    // ===== TODO 20: Completa las conversiones =====
+    let entero = 42
+    let decimal = 9.99
+    let texto = "150"
+    let textoInvalido = "hola"
+
+    // TODO: Convierte 'entero' a Double
+    let enteroADouble = Double(entero)
+    print(enteroADouble) // Imprime: 42.0 (se convierte a tipo Double)
+
+    // TODO: Convierte 'decimal' a Int
+    let decimalAEntero = Int(decimal)
+    print(decimalAEntero) // PREDICT 7: Imprime 9. Int() TRUNCA los decimales, no los redondea.
+
+    // TODO: Convierte 'texto' a Int
+    let textoAEntero = Int(texto)
+    print(textoAEntero) // PREDICT 8: Imprime Optional(150) porque la conversión de String a Int es un Opcional.
+
+    // TODO: Convierte 'textoInvalido' a Int
+    let invalido = Int(textoInvalido)
+    print(invalido) // PREDICT 9: Imprime nil porque "hola" no es un texto numérico válido.
+}
+
+
+// ===== 4.2 EJERCICIO DE INVESTIGACIÓN =====
+do {
+    // ===== TODO 21: Redondear un Double a 2 decimales =====
+    let piEjemplo: Double = 3.14159
+    let numeroRedondeado = String(format: "%.2f", piEjemplo)
+    print("Número con 2 decimales: \(numeroRedondeado)")
+    
+    // Explicación de la solución:
+    // Se investigó en la documentación oficial de Apple sobre formateo de cadenas (String Format).
+    // Usamos String(format: "%.2f", valor) donde %.2f le indica a Swift que represente
+    // un valor flotante/decimal (f) limitándolo a exactamente 2 decimales.
+
+
+    // ===== TODO 22: Operador += en Swift =====
+    // Explicación: El operador += es un operador de asignación compuesta (Addition Assignment).
+    // Suma el valor del lado derecho a la variable del lado izquierdo y guarda el resultado en ella.
+
+    // Ejemplo 1: Incrementar un contador o puntuación
+    var puntos = 10
+    puntos += 5 // Equivale a: puntos = puntos + 5 (Resultado: 15)
+    print("Ejemplo 1 (Suma numérica): \(puntos)")
+
+    // Ejemplo 2: Concatenar cadenas de texto (String)
+    var saludo = "Hola"
+    saludo += " Mundo" // Equivale a: saludo = saludo + " Mundo"
+    print("Ejemplo 2 (Concatenación): \(saludo)")
+
+    // Ejemplo 3: Acumulador de precios o totales
+    var totalComprado = 50.0
+    totalComprado += 18.50 // Equivale a: totalComprado = totalComprado + 18.50
+    print("Ejemplo 3 (Acumulador decimal): S/. \(totalComprado)")
+}
