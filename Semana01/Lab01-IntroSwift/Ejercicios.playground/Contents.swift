@@ -441,3 +441,88 @@ do {
     print("Promedio general de la clase: \(String(format: "%.2f", promedioGeneral))") // Imprime el promedio general de la clase
     print("==================================================") // Imprime cierre de tabla
 }
+import Foundation // Importa la librería base para funciones matemáticas y de formato
+
+// ==========================================
+// 1. CONVERSIÓN DE TEMPERATURA (3 valores)
+// ==========================================
+
+// Definición de las 3 temperaturas en grados Celsius
+let c1: Double = 0.0 // Primera temperatura a convertir: punto de congelación del agua
+let c2: Double = 25.0 // Segunda temperatura a convertir: temperatura ambiente promedio
+let c3: Double = 100.0 // Tercera temperatura a convertir: punto de ebullición del agua
+
+// Cálculo de Fahrenheit: (Celsius * 9/5) + 32
+let f1 = (c1 * 9.0 / 5.0) + 32.0 // Convierte 0°C a Fahrenheit multiplicando por 1.8 y sumando 32
+let f2 = (c2 * 9.0 / 5.0) + 32.0 // Convierte 25°C a Fahrenheit multiplicando por 1.8 y sumando 32
+let f3 = (c3 * 9.0 / 5.0) + 32.0 // Convierte 100°C a Fahrenheit multiplicando por 1.8 y sumando 32
+
+// Cálculo de Kelvin: Celsius + 273.15
+let k1 = c1 + 273.15 // Convierte 0°C a Kelvin sumando la constante del cero absoluto (273.15)
+let k2 = c2 + 273.15 // Convierte 25°C a Kelvin sumando la constante del cero absoluto (273.15)
+let k3 = c3 + 273.15 // Convierte 100°C a Kelvin sumando la constante del cero absoluto (273.15)
+
+// Imprimir tabla formateada de Temperaturas
+print("==================================================") // Línea divisoria superior
+print(String(format: "%-12@ %-12@ %-12@", "CELSIUS (°C)", "FAHRENHEIT", "KELVIN (K)")) // Encabezados alineados a la izquierda
+print("==================================================") // Línea divisoria de cabecera
+print(String(format: "%-12.1f %-12.1f %-12.2f", c1, f1, k1)) // Formatea y muestra el primer conjunto de datos
+print(String(format: "%-12.1f %-12.1f %-12.2f", c2, f2, k2)) // Formatea y muestra el segundo conjunto de datos
+print(String(format: "%-12.1f %-12.1f %-12.2f", c3, f3, k3)) // Formatea y muestra el tercer conjunto de datos
+print("==================================================\n") // Línea divisoria inferior con salto de línea
+
+// ==========================================
+// 2. CONVERSIÓN DE DISTANCIA (3 valores)
+// ==========================================
+
+// Definición de las 3 distancias en kilómetros
+let km1: Double = 5.0 // Primera distancia en kilómetros (ej. caminata corta)
+let km2: Double = 42.195 // Segunda distancia en kilómetros (ej. maratón completa)
+let km3: Double = 100.0 // Tercera distancia en kilómetros (ej. viaje en carretera)
+
+// Cálculo de Millas: Kilómetros / 1.60934
+let mi1 = km1 / 1.60934 // Convierte 5 km a millas dividiendo por el factor exacto de conversión (1 milla = 1.60934 km)
+let mi2 = km2 / 1.60934 // Convierte 42.195 km a millas dividiendo por el factor exacto de conversión
+let mi3 = km3 / 1.60934 // Convierte 100 km a millas dividiendo por el factor exacto de conversión
+
+// Cálculo de Metros: Kilómetros * 1000
+let m1 = km1 * 1000.0 // Convierte 5 km a metros multiplicando por 1000 (1 km equivale a 1000 metros)
+let m2 = km2 * 1000.0 // Convierte 42.195 km a metros multiplicando por 1000
+let m3 = km3 * 1000.0 // Convierte 100 km a metros multiplicando por 1000
+
+// Imprimir tabla formateada de Distancias
+print("==================================================") // Línea divisoria superior
+print(String(format: "%-12@ %-12@ %-12@", "KILÓMETROS", "MILLAS", "METROS")) // Encabezados alineados
+print("==================================================") // Línea divisoria de cabecera
+print(String(format: "%-12.2f %-12.2f %-12.0f", km1, mi1, m1)) // Formatea primer registro (metros sin decimales)
+print(String(format: "%-12.2f %-12.2f %-12.0f", km2, mi2, m2)) // Formatea segundo registro
+print(String(format: "%-12.2f %-12.2f %-12.0f", km3, mi3, m3)) // Formatea tercer registro
+print("==================================================\n") // Línea divisoria inferior con salto de línea
+
+// ==========================================
+// 3. CONVERSIÓN DE TIEMPO (3 valores)
+// ==========================================
+
+// Definición de las 3 duraciones en horas
+let h1: Double = 1.5 // Primera duración en horas (1 hora y media)
+let h2: Double = 8.0 // Segunda duración en horas (jornada laboral típica)
+let h3: Double = 24.0 // Tercera duración en horas (un día completo)
+
+// Cálculo de Minutos: Horas * 60
+let min1 = h1 * 60.0 // Convierte 1.5 horas a minutos multiplicando por 60 (1 hora contiene 60 minutos)
+let min2 = h2 * 60.0 // Convierte 8 horas a minutos multiplicando por 60
+let min3 = h3 * 60.0 // Convierte 24 horas a minutos multiplicando por 60
+
+// Cálculo de Segundos: Minutos * 60 (o Horas * 3600)
+let seg1 = min1 * 60.0 // Convierte minutos a segundos multiplicando por 60 (1 minuto contiene 60 segundos)
+let seg2 = min2 * 60.0 // Convierte minutos a segundos multiplicando por 60
+let seg3 = min3 * 60.0 // Convierte minutos a segundos multiplicando por 60
+
+// Imprimir tabla formateada de Tiempos
+print("==================================================") // Línea divisoria superior
+print(String(format: "%-12@ %-12@ %-12@", "HORAS", "MINUTOS", "SEGUNDOS")) // Encabezados de la tabla
+print("==================================================") // Línea divisoria de cabecera
+print(String(format: "%-12.1f %-12.0f %-12.0f", h1, min1, seg1)) // Muestra 1.5 horas, 90 min, 5400 seg
+print(String(format: "%-12.1f %-12.0f %-12.0f", h2, min2, seg2)) // Muestra 8.0 horas, 480 min, 28800 seg
+print(String(format: "%-12.1f %-12.0f %-12.0f", h3, min3, seg3)) // Muestra 24.0 horas, 1440 min, 86400 seg
+print("==================================================") // Línea divisoria final
