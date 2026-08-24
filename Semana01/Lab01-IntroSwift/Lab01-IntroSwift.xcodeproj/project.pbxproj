@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		CD8BB498303CD9C9001C092A /* Lab01-IntroSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab01-IntroSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8BB4B2303CDDC3001C092A /* Ejercicios.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ejercicios.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +33,7 @@
 		CD8BB48F303CD9C9001C092A = {
 			isa = PBXGroup;
 			children = (
+				CD8BB4B2303CDDC3001C092A /* Ejercicios.playground */,
 				CD8BB49A303CD9C9001C092A /* Lab01-IntroSwift */,
 				CD8BB499303CD9C9001C092A /* Products */,
 			);
